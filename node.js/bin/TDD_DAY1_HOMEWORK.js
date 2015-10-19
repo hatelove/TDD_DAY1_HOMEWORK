@@ -13,7 +13,7 @@ module.exports = function () {
 		for(var i = 0; i<resultLength; i++){
 			result[i] = 0;
 		}
-		for (var i = 1; i<dataLength; i++) {
+		for (var i = 1; i<=dataLength; i++) {
 			result[count] += data[i-1][columnName];
 			if (i % fetchNumber == 0) {
 				count++;			

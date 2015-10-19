@@ -1,18 +1,17 @@
 <?php
 
-require dirname(__DIR__) . '/vendor/autoload.php';
 require dirname(__DIR__) . '/class/TDD_DAY1_HOMEWORK.php';
 
-class TDD_DAY1_HOMEWORK_TEST extends PHPUnit_Framework_Testcase{
+class TDD_DAY1_HOMEWORK_TEST extends PHPUnit_Framework_TestCase{
 	protected $TDD_DAY1_HOMEWORK_TEST;
 	
 	protected function setUp(){
 		$data = [];
 		for($i = 1;$i<=11;$i++){
-			array_push($data,[Id=>i,Cost=>i,Revenue=>i+10,SellPrice=>i+20]);
+			array_push($data,['Id'=>$i,'Cost'=>$i,'Revenue'=>$i+10,'SellPrice'=>$i+20]);
 		}
 		$this->TDD_DAY1_HOMEWORK_TEST = new TDD_DAY1_HOMEWORK();
-		$this->TDD_DAY1_HOMEWORK_TEST->setData(data);
+		$this->TDD_DAY1_HOMEWORK_TEST->setData($data);
 	}
 	
 	public function test_Column_Name_Cost_3_Group(){
